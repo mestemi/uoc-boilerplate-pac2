@@ -1,0 +1,6 @@
+@mixin alternate-weight($weight1, $weight2) {
+    font-weight: $weight1;
+    &:nth-child(even) {
+        font-weight: $weight2;
+    }
+}

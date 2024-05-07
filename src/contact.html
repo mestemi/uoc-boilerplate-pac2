@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>CuinUOC - Contact</title>
+    <link href="../node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="main main--contact contact">
+        <div class="contact__wrapper">
+            <div class="container">
+                <div class="row">
+                    <h1 class="contact__title col-12 text-center mb-5">
+                        Contacta amb nosaltres
+                    </h1>
+                    <div class="col-12 col-md-4">
+                        <div class="contact-card text-center">
+                            <div class="contact-card__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h2 class="contact-card__title">Telèfon</h2>
+                            <p class="contact-card__text">+34 93 123 45 67</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="contact-card text-center">
+                            <div class="contact-card__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h2 class="contact-card__title">Correu electrònic</h2>
+                            <p class="contact-card__text">
+                                <a href="mailto:cuinuoc@uoc.edu">
+                                    cuinuoc@uoc.edu
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="contact-card text-center">
+                            <div class="contact-card__icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h2 class="contact-card__title">Adreça</h2>
+                            <p class="contact-card__text">Carrer de la Marina, 16, 08005 Barcelona</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="home-contact col-12 mb-4 mt-4 d-flex flex-column align-items-center">
+                    <h2 class="secondary-title text-center mt-3 mb-3 w-100">Si ho prefereixes, emplena el formulari de contacte</h2>
+                    <form class="contact-form  mt-2 row">
+                        <div class="contact-form__group mb-3">
+                            <label for="name" class="form-label contact-form__label">Nom</label>
+                            <input type="text" id="name" name="name" class="form-control contact-form__input" required>
+                        </div>
+                        <div class="contact-form__group mb-3">
+                            <label for="email" class="form-label contact-form__label">Correu electrònic</label>
+                            <input type="email" id="email" name="email" class="form-control contact-form__input" aria-describedby="emailHelp" required>
+                            <div id="emailHelp" class="form-text">No compartirem el teu correu electrònic fora de l'organització</div>
+                        </div>
+                        <div class="contact-form__group mb-3">
+                            <label for="message" class="form-label contact-form__label">Missatge</label>
+                            <textarea id="message" name="message" class="form-control contact-form__textarea" required></textarea>
+                        </div>
+                        <div class="contact-form__group mb-3">
+                            <input type="checkbox" class="form-label form-check-input" id="acceptTerms" required>
+                            <label class="contact-form__label" for="acceptTerms">He llegit i accepto els 
+                                <a type="button" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">termes i condicions</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary contact-form__btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+    <!-- Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Termes i condicions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Les vostres dades personals seran tractades amb la màxima confidencialitat i no seran compartides amb tercers. Aquesta informació serà utilitzada únicament per a la gestió de la vostra consulta. En qualsevol moment podeu exercir els vostres drets d'accés, rectificació, cancel·lació i oposició enviant un correu electrònic a <a href="mailto:cuinuoc@edu.com?subject=Rectificació de dades personals">cuinuoc@uoc.edu</a>.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tancar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

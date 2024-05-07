@@ -1,0 +1,7 @@
+.header {
+    box-shadow: 0 0.5rem 1rem invert-color($color: $color-white, $amount: 20%);
+}
+
+.main--home .header {
+    background-color: $color-white-transparency;
+}

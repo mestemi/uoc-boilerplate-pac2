@@ -1,12 +1,38 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$cq-sm: 540px;
+$cq-md: 720px;
+$cq-lg: 960px;
+$cq-xl: 1140px;
+$cq-xxl: 1320px;
+
+$font-family-default: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$font-family-header: "Roboto", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 
-$mqMinWidth: 420px;
+$color-primary: #000078;
+$color-primary-opacity: #000078a8;
+$color-secondary: #73edff;
+$color-bg-darkest: hwb(180 20% 20%);
+$color-black: #000;
+$color-white: #fff;
+$color-white-transparency: #ffffff9e;
+$color-link-hover: #d41d94;
+$color-facebook: #3b5998;
+$color-twitter: $color-black;
+$color-instagram: #e4405f;
+
+$theme-colors: (
+  "primary": $color-primary,
+  "secondary": $color-secondary
+);

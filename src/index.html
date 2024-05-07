@@ -5,23 +5,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>CuinUOC - Inici</title>
+    <link href="../node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <!-- https://www.stockvault.net/photo/177830/eating-well-healthy-italian-food-ingredients -->
+
+    <main class="main main--home">
+      <include src="./views/header.html"></include>
+      <div class="container home-grid">
+        <h2 class="home-grid__title home-grid__title--one d-flex align-items-center">Què és CuinUOC?</h2>
+        <p class="home-grid__text home-grid__text--one d-flex align-items-center">
+          CuinUOC és un esdeveniment culinari que organitza la Universitat Oberta de Catalunya (UOC) per a la seva comunitat. En aquesta edició, els participants hauran de cuinar una recepta de cuina saludable i sostenible. Els millors plats seran premiats per un jurat d'experts en cuina.
+        </p>
+        <h2 class="home-grid__title home-grid__title--two d-flex align-items-center">Quan i on es celebra?</h2>
+        <p class="home-grid__text home-grid__text--two d-flex align-items-center">
+          CuinUOC es celebra el 15 de juny a les 19:00h a la seu de MasterChef (Carrer de la Marina, 16, 08005 Barcelona) i es retransmetrà en directe a través de la web de CuinUOC.
+        </p>
+        <a href="./contact.html" class="btn btn-primary home-grid__btn">Inscriu-t'hi ara</a>
+        <img class="home-grid__img" src="./assets/images/masterchef.jpg" alt="Cocinas Masterchef" />
+      </div>
+    </main>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

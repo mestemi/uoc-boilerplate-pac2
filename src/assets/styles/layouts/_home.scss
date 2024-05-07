@@ -3,55 +3,138 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
+  padding: 0;
   margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-default;
   font-size: 16px;
   line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  color: $color-primary;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+:is(p, div) {
+  font-size: 1.15rem;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+p {
+  margin: 20px 0;
+}
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+.container li p {
+  margin: 0;
+}
+
+.container {
+  container-type: inline-size;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: $font-family-header;
+}
+
+.main {
+  &--home {
+    min-height: 100dvh;
+    background-image: url('../images/health-food.jpg');
+    background-size: cover;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.home-grid {
+  position: relative;
+  padding: 75px 50px;
+  text-align: center;
+  
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  &__title {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    padding: 30px;
+    color: $color-white;
+    background-color: $color-primary;
+    border-left: 20px solid $color-white;
+
+    @container (min-width: #{$cq-lg}) {
+      width: 80%;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    float: right;
+    width: 90%;
+    padding: 20px;
+    background-color: $color-secondary;
+    border-right: 10px solid $color-black;
+
+    
+    @container (min-width: #{$cq-lg}) {
+      width: 80%;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 1;
+    width: 100%;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+@supports (display:grid) {
+  @media (min-width: $breakpoint-lg) and (min-height: 769px) {
+    .home-grid {
+      display: grid;
+      grid-template-rows: 2vh 7vh 20vh 2vh 7vh 20vh 7vh 10vh;
+      grid-template-columns: 25px repeat(3, minmax(100px, 1fr)) 50px minmax(100px, 1fr) repeat(3, minmax(100px, 1fr));
+      padding: 0;
+    
+      &__img {
+        grid-area: 1 / 2 / 9 / 8;
+      }
+
+      &__title {
+        grid-column: 5 / 9;
+        width: 100%;
+
+        &--one {
+          grid-row: 2;
+        }
+
+        &--two {
+          grid-row: 5;
+        }
+      }
+
+      &__text {
+        grid-column: 6 / 10;
+        width: 100%;
+
+        &--one {
+          grid-row: 3;  
+        }
+
+        &--two {
+          grid-row: 6;
+        }
+      }
+
+      &__btn {
+        grid-row: 7;
+        grid-column: 1 / 6;
+        width: 100%;
+      }
+    }
+  }
 }
+
